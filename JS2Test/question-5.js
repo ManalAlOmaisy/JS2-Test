@@ -24,7 +24,7 @@ const loginFunction = (password, successCb, failedCb) => {
 
 const addPassword = (newPassword) => {
     // FILL THIS IN
-    onSuccess(newPassword)
+    return possiblePasswords.push(newPassword);
 }
 
 // DO NOT EDIT THE CODE BELOW THIS LINE! THIS IS TEST CODE THAT MAKES SURE IT WORKS
