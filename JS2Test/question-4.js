@@ -4,14 +4,15 @@
  * Besides the obvious answer that the initialise function is called twice, explain what is going wrong.
  * Add your explanation as a comment here:
  * 
- *  We are calling  or invoking the function twice, by envoking the funcion (initialise()) and by envoking also the function Settimeout which is calling the function (initialise()) inside it again.
- * 
- * 
+ * setTimeout is a built-in function that goes from Call Stack into Web-APIs,once the time is over it goes from Web-APIs into Event Queue. 
+ * As soon as the Call Stack is empty, setTimeout function is brought to Call Stack.
+ * So what the developer probably doesn't have in mind that the variable 'alreadyInitialised' would become true too late, since those two times of setTimeout are already on their way somewhere either in Web APIs or Event Queue,
+ * and that's why the 'else' block runs twice
  * 
  * Now the developer has asked you how you would solve the problem. As mentioned in the comments they cannot change the time it takes to run the lines.
  * Explain to them what they should do in the comment here:
  * 
- * they should envoke the function once only in the settimeout  or which it will call the function after the 100 ml second. 
+ * they should move 'alreadyInitialised = true;' to line 26. 
  * 
  */
 
