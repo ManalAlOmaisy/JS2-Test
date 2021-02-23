@@ -11,16 +11,16 @@ function calculate(numbers, operator) {
 
     if(operator === 'add'){
         return numbers.reduce((Total, num) => Total + num,0);
-    }
+    };
     if(operator === 'multiply'){
         return numbers.reduce((num1, num2) => num1 * num2);
-    }
+    };
     if(operator === 'divide'){
         return numbers.reduce((num1, num2) => num1 / num2);
-    }
+    };
     if(operator === 'subtract'){
         return numbers.reduce((num1, num2) => num1 - num2);
-    }
+    };
    return true;
 }
 
