@@ -9,15 +9,14 @@
 
 function loginToAPI() {
     const password = 'donthackmeplease';
-    
-    if (password === 'donthackmeplease') {
+    if (password === 'donthackmeplease'){
         console.log('LOGGED IN')
-    }
-}
+    };
+};
 
 loginToAPI();
 
 /** EVIL HACKER CODE STARTS HERE. DO NOT EDIT THIS PART */
-if (password != undefined) {
+if (password != undefined){
     console.log(`Well well, looks like your password is ${password}`);
-}
+};
