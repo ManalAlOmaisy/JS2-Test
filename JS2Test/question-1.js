@@ -44,23 +44,13 @@
     }
   ];
 
-  let ul = document.createElement('ul');
-  ul.style.backgroundColor = "pink"; 
-  
-  for( let i = 0; i < tags.length; i++){
+ const ul = document.createElement('ul');
 
-  let listItem = document.createElement('li');
-  
-  listItem.innerText = `ID : ${tags[i]._id}, NAME: ${tags[i].name}, COLOR: ${tags[i].color}`
-
-  ul.appendChild(listItem);
-  document.body.appendChild(ul);
+ for( let i = 0; i < tags.length; i++){
+  const listItem = document.createElement('li');
+    listItem.innerText = `Name: ${tags[i].name}`
+    listItem.style.backgroundColor = tags[i].color
+    ul.appendChild(listItem);
+    document.body.appendChild(ul);
   }
-
-
-  
-
-  
-
-
 
